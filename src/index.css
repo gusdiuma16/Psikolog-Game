@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces", serif;
+  
+  --color-sage-50: #f4f7f4;
+  --color-sage-100: #e6ede6;
+  --color-sage-200: #ceddce;
+  --color-sage-600: #5a7a5a;
+  --color-sage-900: #2d3d2d;
+  
+  --color-clay-500: #b36b5d;
+  --color-clay-600: #945347;
+}
+
+@layer base {
+  body {
+    @apply bg-sage-50 text-sage-900 font-sans antialiased;
+  }
+  
+  h1, h2, h3 {
+    @apply font-serif;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-sage-600 text-white rounded-full font-semibold hover:bg-sage-900 transition-all duration-300 shadow-lg hover:shadow-sage-600/20 active:scale-95;
+}
+
+.category-card {
+  @apply p-6 rounded-3xl transition-all duration-500 cursor-pointer border-2 border-transparent hover:border-sage-600/30 hover:shadow-2xl hover:-translate-y-1;
+}
+
+.markdown-body p {
+  @apply mb-2 last:mb-0;
+}
+
+.markdown-body ul, .markdown-body ol {
+  @apply ml-4 mb-2 list-disc;
+}
+
